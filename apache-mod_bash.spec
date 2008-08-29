@@ -37,6 +37,8 @@ server.
 cp %{SOURCE1} %{mod_conf}
 
 %build
+export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
+
 autoreconf -fis
 
 %configure2_5x
@@ -72,4 +74,3 @@ rm -rf %{buildroot}
 %doc examples/*.bash README
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/modules.d/%{mod_conf}
 %attr(0755,root,root) %{_libdir}/apache-extramodules/%{mod_so}
-
