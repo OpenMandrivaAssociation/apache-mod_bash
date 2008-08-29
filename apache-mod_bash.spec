@@ -38,7 +38,7 @@ cp %{SOURCE1} %{mod_conf}
 
 %build
 export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
-
+export CPPFLAGS="`apr-1-config --cppflags`"
 autoreconf -fis
 
 %configure2_5x
