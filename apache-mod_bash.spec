@@ -6,7 +6,7 @@
 Summary:	Apache module which embeds bash
 Name:		apache-%{mod_name}
 Version:	0.1.1
-Release: 	%mkrel 3
+Release: 	%mkrel 4
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.autistici.org/bakunin/mod_bash/
