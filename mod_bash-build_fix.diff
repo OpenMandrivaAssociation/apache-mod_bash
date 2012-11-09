@@ -1,0 +1,59 @@
+--- configure.ac	2008-08-03 15:31:52.000000000 +0200
++++ configure.ac.oden	2008-08-29 12:19:58.000000000 +0200
+@@ -30,46 +30,46 @@
+ fi
+ 
+ # APXS2:
+-AC_PATH_PROG(apxs2, apxs2)
+-if test "$apxs2" = ""; then
+-  AC_MSG_ERROR(No apxs2 (apache2) found!)
++AC_PATH_PROG(apxs, apxs)
++if test "$apxs" = ""; then
++  AC_MSG_ERROR(No apxs (apache2) found!)
+ fi
+ 
+ # CFLAGS:
+ AC_MSG_CHECKING(for apache CFLAGS)
+-RESULT=`$apxs2 -q CFLAGS`
++RESULT=`$apxs -q CFLAGS`
+ CFLAGS="$CFLAGS $RESULT"
+ AC_MSG_RESULT($RESULT)
+ 
+ AC_MSG_CHECKING(for apache CFLAGS_SHLIB)
+-RESULT=`$apxs2 -q CFLAGS_SHLIB`
++RESULT=`$apxs -q CFLAGS_SHLIB`
+ CFLAGS="$CFLAGS $RESULT"
+ AC_MSG_RESULT($RESULT)
+ 
+ AC_MSG_CHECKING(for apache INCLUDEDIR)
+-RESULT=`$apxs2 -q INCLUDEDIR`
++RESULT="`$apxs -q INCLUDEDIR` `apr-1-config --includes`"
+ CFLAGS="$CFLAGS -I$RESULT"
+ AC_MSG_RESULT($RESULT)
+ 
+ # LIBS:
+ AC_MSG_CHECKING(for apache LIBS_SHLIB)
+-RESULT=`$apxs2 -q LIBS_SHLIB`
++RESULT=`$apxs -q LIBS_SHLIB`
+ LIBS="$LIBS -I$RESULT"
+ AC_MSG_RESULT($RESULT)
+ 
+ AC_MSG_CHECKING(for apache LD_SHLIB)
+-RESULT=`$apxs2 -q LD_SHLIB`
++RESULT=`$apxs -q LD_SHLIB`
+ LIBS="$LIBS -I$RESULT"
+ AC_MSG_RESULT($RESULT)
+ 
+ AC_MSG_CHECKING(for apache LDFLAGS_SHLIB)
+-RESULT=`$apxs2 -q LDFLAGS_SHLIB`
++RESULT=`$apxs -q LDFLAGS_SHLIB`
+ LIBS="$LIBS -I$RESULT"
+ AC_MSG_RESULT($RESULT)
+ 
+ # Module Path:
+ AC_MSG_CHECKING(for apache module path)
+-RESULT=`$apxs2 -q LIBEXECDIR`
++RESULT=`$apxs -q LIBEXECDIR`
+ libdir="$RESULT"
+ AC_MSG_RESULT($RESULT)
+ 
