@@ -74,3 +74,39 @@ rm -rf %{buildroot}
 %doc examples/*.bash README
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/modules.d/%{mod_conf}
 %attr(0755,root,root) %{_libdir}/apache-extramodules/%{mod_so}
+
+
+%changelog
+* Sat Feb 11 2012 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-7mdv2012.0
++ Revision: 772596
+- rebuild
+
+* Tue May 24 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-6
++ Revision: 678282
+- mass rebuild
+
+* Sun Oct 24 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-5mdv2011.0
++ Revision: 587940
+- rebuild
+
+* Mon Mar 08 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-4mdv2010.1
++ Revision: 516068
+- rebuilt for apache-2.2.15
+
+* Sat Aug 01 2009 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-3mdv2010.0
++ Revision: 406552
+- rebuild
+
+* Tue Jan 06 2009 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-2mdv2009.1
++ Revision: 325639
+- rebuild
+
+* Fri Aug 29 2008 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-1mdv2009.0
++ Revision: 277328
+- fix build (again...)
+- fix build
+- import apache-mod_bash
+
+
+* Fri Aug 29 2008 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-1mdv2009.0
+- initial Mandriva package
