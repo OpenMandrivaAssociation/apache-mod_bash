@@ -9,7 +9,7 @@ Version:	0.1.1
 Release: 	8
 Group:		System/Servers
 License:	Apache License
-URL:		http://www.autistici.org/bakunin/mod_bash/
+URL:		https://www.autistici.org/bakunin/mod_bash/
 Source0:	http://www.autistici.org/bakunin/mod_bash/src/%{mod_name}-%{version}.tar.gz
 Source1:	%{mod_conf}
 Patch0:		mod_bash-build_fix.diff
